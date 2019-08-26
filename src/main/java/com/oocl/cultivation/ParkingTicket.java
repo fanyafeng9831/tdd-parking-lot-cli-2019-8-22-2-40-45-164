@@ -8,6 +8,9 @@ public class ParkingTicket {
 		return isUse;
 	}
 
+//	public void setIsUse(boolean isUse) {
+//		this.isUse = isUse;
+//	}
 	public void setIsUse(boolean isUse) {
 		this.isUse = isUse;
 	}

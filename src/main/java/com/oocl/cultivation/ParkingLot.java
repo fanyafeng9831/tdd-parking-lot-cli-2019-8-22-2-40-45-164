@@ -7,7 +7,7 @@ import com.oocl.cultivation.Car;
 import com.oocl.cultivation.ParkingTicket;
 
 public class ParkingLot {
-	  private final int capacity;
+	    private final int capacity;
 	    private Map<ParkingTicket, Car> cars = new HashMap<>();
 
 	    public ParkingLot() {
