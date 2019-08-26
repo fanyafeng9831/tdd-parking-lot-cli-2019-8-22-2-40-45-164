@@ -46,7 +46,7 @@ class ParkingBoyFacts {
 	}
 
 	@Test
-	void should_not_fetch_any_car_once_ticket_is_wrong() {
+	void should_not_fetch_any_car_given_ticket_when_ticket_is_wrong() {
 		ParkingLot parkingLot = new ParkingLot();
 		ParkingBoy parkingBoy = new ParkingBoy(parkingLot);
 		Car car = new Car();
@@ -132,14 +132,11 @@ class ParkingBoyFacts {
 	}
 
 	@Test
-	void should_not_park_cars_to_parking_lot_if_there_is_not_enough_position() {
-		final int capacity = 1;
-		ParkingLot parkingLot = new ParkingLot(capacity);
+	void should_not_park_cars_to_parking_given_there_is_not_enough_position() {
+		ParkingLot parkingLot = new ParkingLot(0);
 		ParkingBoy parkingBoy = new ParkingBoy(parkingLot);
-
-		parkingBoy.park(new Car());
-
-		assertNull(parkingBoy.park(new Car()));
+		Car car = new Car();
+		assertNull(parkingBoy.park(car));
 	}
 
 	@Test
